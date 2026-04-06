@@ -1,0 +1,35 @@
+{
+  "jake": {
+    "agent": "jake",
+    "role": "NBA Form/Pace/Scheduling",
+    "predictions": 0,
+    "correct": 0,
+    "accuracy": 0,
+    "high_confidence_accuracy": 0,
+    "avg_confidence": 0,
+    "profit_loss": 0,
+    "last_updated": "2026-04-06"
+  },
+  "dylan": {
+    "agent": "dylan",
+    "role": "NBA Market/Matchup",
+    "predictions": 0,
+    "correct": 0,
+    "accuracy": 0,
+    "high_confidence_accuracy": 0,
+    "avg_confidence": 0,
+    "profit_loss": 0,
+    "last_updated": "2026-04-06"
+  },
+  "consensus": {
+    "agent": "tyson",
+    "role": "Consensus",
+    "predictions": 0,
+    "correct": 0,
+    "accuracy": 0,
+    "high_confidence_accuracy": 0,
+    "avg_confidence": 0,
+    "profit_loss": 0,
+    "last_updated": "2026-04-06"
+  }
+}

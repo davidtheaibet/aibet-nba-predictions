@@ -1,0 +1,39 @@
+{
+  "date": "TEMPLATE",
+  "agent": "AGENT_NAME",
+  "games": [
+    {
+      "game_id": "HOME-AWAY-YYYYMMDD",
+      "teams": {
+        "home": "HOME_TEAM",
+        "away": "AWAY_TEAM"
+      },
+      "pick": "TEAM SPREAD",
+      "confidence": 0,
+      "win_probability": 0,
+      "projected_score": {
+        "home": 0,
+        "away": 0
+      },
+      "margin": 0,
+      "reasoning": "Detailed analysis here...",
+      "key_factors": [
+        "factor_1",
+        "factor_2"
+      ],
+      "data_sources": [
+        "source_1",
+        "source_2"
+      ],
+      "risk_flags": [
+        "flag_1"
+      ],
+      "timestamp": "2026-04-06T00:00:00Z"
+    }
+  ],
+  "metadata": {
+    "games_analyzed": 0,
+    "high_confidence_picks": 0,
+    "notes": ""
+  }
+}
