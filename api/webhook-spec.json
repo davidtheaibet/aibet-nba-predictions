@@ -1,0 +1,84 @@
+{
+  "webhook_version": "1.0",
+  "description": "Webhook spec for theaibet.com integration",
+  "endpoints": [
+    {
+      "name": "Receive Predictions",
+      "method": "POST",
+      "url": "https://api.theaibet.com/v1/predictions",
+      "authentication": {
+        "type": "bearer_token",
+        "header": "Authorization: Bearer {token}"
+      },
+      "headers": {
+        "Content-Type": "application/json",
+        "X-Source": "paperclip-aibet",
+        "X-Event": "predictions.ready"
+      },
+      "body": {
+        "schema": "consensus.json",
+        "example": {
+          "date": "2026-04-07",
+          "games": [
+            {
+              "game_id": "NYK-ATL-20260407",
+              "consensus_pick": "NYK -8",
+              "consensus_confidence": 74,
+              "recommendation": "play",
+              "unit_suggestion": 1.0
+            }
+          ]
+        }
+      },
+      "responses": {
+        "201": "Created - predictions stored",
+        "200": "Updated - predictions refreshed",
+        "401": "Unauthorized - invalid token",
+        "422": "Validation error - bad format"
+      }
+    },
+    {
+      "name": "Update Results",
+      "method": "POST",
+      "url": "https://api.theaibet.com/v1/results",
+      "authentication": {
+        "type": "bearer_token"
+      },
+      "body": {
+        "date": "2026-04-07",
+        "games": [
+          {
+            "game_id": "NYK-ATL-20260407",
+            "home_score": 120,
+            "away_score": 105,
+            "cover": true,
+            "result": "win"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Get Predictions",
+      "method": "GET",
+      "url": "https://api.theaibet.com/v1/predictions?date=2026-04-07",
+      "response": {
+        "date": "2026-04-07",
+        "games": [...],
+        "metadata": {...}
+      }
+    }
+  ],
+  "triggers": {
+    "on_consensus_approval": {
+      "condition": "consensus.json committed + ELI approval",
+      "action": "POST to /v1/predictions",
+      "retry": 3,
+      "timeout_seconds": 30
+    },
+    "on_results_available": {
+      "condition": "games completed + scores available",
+      "action": "POST to /v1/results",
+      "schedule": "0 2 * * *"
+    }
+  }
+}
