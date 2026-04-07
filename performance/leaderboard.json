@@ -31,5 +31,16 @@
     "avg_confidence": 0,
     "profit_loss": 0,
     "last_updated": "2026-04-06"
+  },
+  "zac_collaborative": {
+    "agent": "zac_collaborative",
+    "role": "Zac + David Manual Picks",
+    "predictions": 3,
+    "correct": 3,
+    "accuracy": 100.0,
+    "high_confidence_accuracy": 100.0,
+    "avg_confidence": 70.0,
+    "profit_loss": 0,
+    "last_updated": "2026-04-07"
   }
 }

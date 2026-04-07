@@ -1,0 +1,49 @@
+{
+  "date": "2026-04-06",
+  "agent": "zac_collaborative",
+  "predictions": [
+    {
+      "game_id": "NYK-ATL-20260406",
+      "teams": {"home": "ATL", "away": "NYK"},
+      "pick": "NYK",
+      "confidence": 70,
+      "win_probability": 65,
+      "reasoning": "Home court, better record",
+      "factors": ["home_court", "record"],
+      "result": "WIN",
+      "actual_score": "108-105",
+      "timestamp": "2026-04-06T10:00:00Z"
+    },
+    {
+      "game_id": "DET-ORL-20260406",
+      "teams": {"home": "ORL", "away": "DET"},
+      "pick": "ORL",
+      "confidence": 80,
+      "win_probability": 75,
+      "reasoning": "Motivation gap huge",
+      "factors": ["motivation"],
+      "result": "WIN",
+      "actual_score": "123-107",
+      "timestamp": "2026-04-06T10:00:00Z"
+    },
+    {
+      "game_id": "POR-DEN-20260406",
+      "teams": {"home": "DEN", "away": "POR"},
+      "pick": "DEN",
+      "confidence": 85,
+      "win_probability": 78,
+      "reasoning": "Motivation + talent gap",
+      "factors": ["motivation", "talent"],
+      "result": "WIN",
+      "actual_score": "137-132 (OT)",
+      "timestamp": "2026-04-06T10:00:00Z"
+    }
+  ],
+  "summary": {
+    "total_picks": 3,
+    "wins": 3,
+    "losses": 0,
+    "accuracy": 100.0,
+    "notes": "Clean sweep. Passed on Spurs and Cavs games (both unpredictable)."
+  }
+}
